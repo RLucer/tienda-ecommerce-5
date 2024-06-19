@@ -1,0 +1,11 @@
+.lila-btn-3 {
+    background-color: #c080d9;
+    border-color: #c080d9;
+    color: white;
+        width : 100%;
+    }
+
+    .lila-btn-3:hover {
+    background-color: #834aff;
+    border-color: #834aff;
+    }

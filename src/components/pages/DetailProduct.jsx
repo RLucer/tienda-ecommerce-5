@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-
+import './DetailProduct.css'
 
 export function DetailProduct() {
 
@@ -41,29 +41,12 @@ export function DetailProduct() {
     if (data && data != '') {
         return (
             <>
-                <style type="text/css">
-                    {`
- 
-.lila-btn-3 {
-  background-color: #9572ff;
-  border-color: #9572ff;
-  color: white;
-    width : 100%;
-}
-
-.lila-btn-3:hover {
-  background-color: #834aff;
-  border-color: #834aff;
-}
-
-                                `}
-                </style>
+             
                 <Container>
                     <Row><h2>   {data.detail.name}</h2>
                         <br /><br />
                     </Row>
                     <Row>
-
                         <Col sm={7}>
                             <img
                                 className="d-block w-auto"
@@ -85,10 +68,8 @@ export function DetailProduct() {
                                 <h4>Precio $ {data.detail.price}</h4>
                                 <hr />
                                 <br /><br />
-
                             </Col>
                          
-
                             <Col>
                                 <Container className="my-3">
                                     <Row>

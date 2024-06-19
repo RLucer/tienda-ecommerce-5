@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import './Cart.css';
-import { Button,Alert } from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,8 +10,6 @@ import { UserContext } from '../context/UserContext';
 import axios from 'axios';
 import { Wallet, initMercadoPago } from '@mercadopago/sdk-react';
 //import Alert from 'react-bootstrap/Alert';
-
-
 
 export const Cart = () => {
 
@@ -22,7 +20,6 @@ export const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
   const { user } = useContext(UserContext);
 
-
   const [total, setTotal] = useState(0);
   const [preferenceId, setPreferenceId] = useState(null)
 
@@ -32,14 +29,6 @@ export const Cart = () => {
     setCart(newCartItems);
   };
 
-  // const handleBuy = async () => {
-  //   if (total > 0) {
-  //     const id = await createPreference();
-  //     if (id) {
-  //       setPreferenceId(id);
-  //     }
-  //   }
-  // };
   const handleBuy = async () => {
     const id = await createPreference();
     if (id) {
@@ -51,7 +40,7 @@ export const Cart = () => {
     if (cart.length > 0) {
       setTotal(cart.reduce((acc, el) => acc + el.detail.price, 0));
       if (total > 0) {
-        
+
         handleBuy();
       }
     } else {
@@ -61,18 +50,7 @@ export const Cart = () => {
 
 
 
-  },[cart,total] );
-
-
-
-
-
-
-
-
-
-
-
+  }, [cart, total]);
 
   const BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/mercadopago`
 
@@ -91,10 +69,6 @@ export const Cart = () => {
       console.log(error)
     }
   }
-
-
-
-
 
   return cart.length > 0 ? (
     <Container>
@@ -123,22 +97,15 @@ export const Cart = () => {
             <Card.Body>
               <Card.Title>Elige un medio de pago disponible</Card.Title>
               <Card.Text >
-
               </Card.Text>
-            
               {/* {preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />}  */}
-
-             {/* { total > 0 ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />):(<>nada</>) } */}
-
-
-
               {user ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />) : (<>
                 {[
                   'warning',
                 ].map((variant) => (
                   <Alert key={variant} variant={variant}>
-                    Para poder pagar tu pedido debes estar registrado.
-                    <Alert.Link href="/sesion"> Registrarte!!  ó  Inicia Sesion</Alert.Link>   Gracias!!!
+                    Para pagar tu pedido debes iniciar sesion.
+                    <Alert.Link href="/sesion"> Pincha AQUI </Alert.Link>   Gracias!!!
                   </Alert>
                 ))}
               </>)}

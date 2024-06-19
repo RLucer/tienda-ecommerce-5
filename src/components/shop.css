@@ -1,0 +1,17 @@
+/* App.css */
+.custom-button {
+    background-color: #c080d9;
+    border-color: #f0eff1;
+    color: white;
+  }
+  
+  .custom-button:hover {
+    background-color: #834aff;
+    border-color: #834aff;
+  }
+  
+  .custom-badge {
+    background-color: #ed695a;
+    color: white;
+  }
+  

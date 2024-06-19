@@ -1,6 +1,9 @@
 .new_link{
-    letter-spacing: 4pt; /* para separar entre letras */
-    word-spacing: 16pt;   /* separacion entre palabras */ 
+    letter-spacing: 2pt; /* para separar entre letras */
+    word-spacing: 1pt;   /* separacion entre palabras */ 
     line-height: 22pt;   /* separacion entre lineas */ 
     text-indent: 28pt;   /* para sangrias */ 
+    margin-left: 20%;
+    
+    
   }

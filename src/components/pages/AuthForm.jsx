@@ -60,8 +60,8 @@ export const AuthForm = () => {
         <Container>
         
           <Row>
-            <Col></Col>
-            <Col><section>
+            <Col xs={0} sm={4}></Col>
+            <Col xs={12} sm={4} ><section>
         <div className="Auth-form-container">
           <form className="Auth-form" ref={formRef} onSubmit={onSubmit}>
             <div className="Auth-form-content">
@@ -96,10 +96,9 @@ export const AuthForm = () => {
               </div>
             </div>
           </form>
-
         </div>
       </section></Col>
-            <Col></Col>
+            <Col xs={0} sm={4}></Col>
           </Row>
         </Container>
       

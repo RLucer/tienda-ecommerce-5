@@ -64,8 +64,8 @@ function Cards({ data }) {
                         {`
                     .lila-btn-3 {
                     margin-top: 5px;
-                    background-color: #9572ff;
-                    border-color: #9572ff;
+                    background-color: #c080d9;
+                    border-color: #c080d9;
                     color: white;
                     width : auto ;
                     }
@@ -89,7 +89,7 @@ function Cards({ data }) {
                                 </Card.Text>
                                 <Link to={`/home/${product._id}`}>
                                     <Button variant="secondary" className="lila-btn-3" size="sm">
-                                        Ver...!
+                                        Ver...
                                     </Button>
                                 </Link>
                             </Card.Body>
