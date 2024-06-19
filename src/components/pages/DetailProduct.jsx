@@ -41,27 +41,23 @@ export function DetailProduct() {
     if (data && data != '') {
         return (
             <>
-            <style type="text/css">
-                                {`
-                                .btn-flat {
-                                background-color: purple;
-                                color: white;
-                                }
-                                  .btn-flat2 {
-                                background-color: #9166af;
-                                color: white;
-                                }
-                                  .btn-flat3 {
-                                background-color: #E0B0FF;
-                                color: white;
-                                }
+                <style type="text/css">
+                    {`
+ 
+.lila-btn-3 {
+  background-color: #9572ff;
+  border-color: #9572ff;
+  color: white;
+    width : 100%;
+}
 
-                                .btn-xxl {
-                                padding: 1rem 1.5rem;
-                                font-size: 1.5rem;
-                                }
+.lila-btn-3:hover {
+  background-color: #834aff;
+  border-color: #834aff;
+}
+
                                 `}
-                                </style>
+                </style>
                 <Container>
                     <Row><h2>   {data.detail.name}</h2>
                         <br /><br />
@@ -91,19 +87,28 @@ export function DetailProduct() {
                                 <br /><br />
 
                             </Col>
+                         
+
                             <Col>
-                                <Row className='mt-5 mb-5 '>
-                                    <div >
-                                        <Button variant="flat" onClick={() => buyProducts(data)}>Agregar al Carro</Button>
-                                        <Button variant="flat2" onClick={continueCart}>Ir al Carro</Button>
-                                        <Button variant="flat3" onClick={continueShopping}>Seguir Comprando</Button>
-                                    </div>
-
-                                    <Col sm={4}></Col>
-
-                                    <Col sm={4}></Col>
-
-                                </Row>
+                                <Container className="my-3">
+                                    <Row>
+                                        <Col xs={12} sm={4} className="mb-3">
+                                            <Button variant="secondary" className="lila-btn-3" onClick={() => buyProducts(data)}>
+                                                Agregar
+                                            </Button>
+                                        </Col>
+                                        <Col xs={12} sm={4} className="mb-3">
+                                            <Button variant="secondary" className="lila-btn-3" onClick={continueCart}>
+                                                Ir al Carro
+                                            </Button>
+                                        </Col>
+                                        <Col xs={12} sm={4} className="mb-3">
+                                            <Button variant="secondary" className="lila-btn-3" onClick={continueShopping}>
+                                                Seguir
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </Container>
                             </Col>
                         </Col>
 

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import './Cart.css';
-import { Button } from 'react-bootstrap';
+import { Button,Alert } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -101,19 +101,19 @@ export const Cart = () => {
       <Row>
         <Col>
           <div className="shopping-cart">
-            <h2>Carro de Compras</h2>
-            <br />
+            <div className='text-center'><h4>Carro de Compras</h4></div>
+
             <hr />
             <ul>
               {cart.map((item, index) => (
                 <li key={index} className="cart-item">
-                  <span>{item.detail.name}</span>  <span>${item.detail.price}</span>
+                  <span>{item.detail.name}</span>  <span> $ {item.detail.price}</span>
                   <Button variant='outline-light' onClick={() => removeFromCart(index)}>❌</Button>
                 </li>
               ))}
             </ul>
             <hr />
-            <h3>Total: ${total}</h3>
+            <div className='text-center'><h5>Total:   $ {total}</h5></div>
           </div>
         </Col>
 
@@ -121,18 +121,18 @@ export const Cart = () => {
           <Card style={{ width: '100%', border: '0' }}>
             <Card.Img variant="top" src="" />
             <Card.Body>
-              <Card.Title>Selecciona medios de pago disponible</Card.Title>
+              <Card.Title>Elige un medio de pago disponible</Card.Title>
               <Card.Text >
 
               </Card.Text>
-              {/* <button onClick={handleBuy}> Revisar opciones de pago</button> */}
-
-              {preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />}
+            
+              {/* {preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />}  */}
 
              {/* { total > 0 ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />):(<>nada</>) } */}
 
 
-              {/* {user ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />) : (<>
+
+              {user ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />) : (<>
                 {[
                   'warning',
                 ].map((variant) => (
@@ -141,7 +141,7 @@ export const Cart = () => {
                     <Alert.Link href="/sesion"> Registrarte!!  ó  Inicia Sesion</Alert.Link>   Gracias!!!
                   </Alert>
                 ))}
-              </>)} */}
+              </>)}
 
             </Card.Body>
           </Card>

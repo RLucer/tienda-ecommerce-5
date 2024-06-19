@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AuthForm } from "./components/pages/AuthForm";
 import { Home } from "./components/pages/Home.jsx";
-import "./App.css";
+//import "./App.css";
 import { UserProvider } from "./context/UserContext";
 // import { NavbarMenu } from "./components/Navbar.jsx";
 import { Compras } from "./components/pages/Compras.jsx";

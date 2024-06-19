@@ -25,8 +25,8 @@ export default function NavbarMenu() {
       <Container>
         <Navbar.Brand as={Link} to="/home">  <img
           src="/log.jpeg"
-          width="210"
-          height="210"
+          width="200"
+          height="200"
           className="d-inline-block align-top"
           alt=""
         />
@@ -34,10 +34,8 @@ export default function NavbarMenu() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} className="ms-auto" to="/home">Home</Nav.Link>
-
-            {/* <Nav.Link as={Link} className="ms-auto" to="/sesion"> Iniciar Sesion</Nav.Link> */}
-
+            <Nav.Link as={Link} className="ms-auto " to="/home">Home</Nav.Link>
+            <Nav.Link as={Link} className="ms-auto" to=""></Nav.Link>
             <NavDropdown title=<h5> {user}  </h5> id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} className="ms-auto" to="/perfil">Mi Perfil</NavDropdown.Item>
               <NavDropdown.Item as={Link} className="ms-auto" to="/compras">Mis Compras</NavDropdown.Item>
