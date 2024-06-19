@@ -1,0 +1,18 @@
+.shopping-cart {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: auto;
+ 
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  
+  .cart-item button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
