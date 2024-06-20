@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card';
 import { UserContext } from '../context/UserContext';
 import axios from 'axios';
 import { Wallet, initMercadoPago } from '@mercadopago/sdk-react';
+import { Link } from 'react-router-dom';
 //import Alert from 'react-bootstrap/Alert';
 
 export const Cart = () => {
@@ -78,9 +79,9 @@ export const Cart = () => {
             <div className="shopping-cart">
               <div className='text-center'><h4>Carro de Compras</h4></div>
               <Row>
-                <Col >Producto
+                <Col sm={8} >Producto
                 </Col>
-                <Col>Precio
+                <Col sm={4}>Precio
                 </Col>
 
               </Row>
@@ -89,9 +90,10 @@ export const Cart = () => {
                 {cart.map((item, index) => (
                   <li key={index} className="cart-item">
 
+                    <Card.Img variant="d-block w-auto" src={item.detail.img} width="100px" height="100px" />
                     <span>{item.detail.name}</span>
                     <span> $ {item.detail.price}</span>
-                    <Button variant='outline-light' onClick={() => removeFromCart(index)}>❌</Button>
+                    <Button variant='outline-light' onClick={() => removeFromCart(index)}> ❌ </Button>
 
 
 
@@ -105,27 +107,28 @@ export const Cart = () => {
             </div>
           </Col>
           <Col xs={12} sm={4}>
-          <Card style={{ width: '100%', border: '0' }}>
-            <Card.Img variant="top" src="" />
-            <Card.Body>
-              <Card.Title>Elige un medio de pago disponible</Card.Title>
-              <Card.Text >
-              </Card.Text>
-              {/* {preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />}  */}
-              {user ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />) : (<>
-                {[
-                  'warning',
-                ].map((variant) => (
-                  <Alert key={variant} variant={variant}>
-                    Para pagar tu pedido debes iniciar sesion.
-                    <Alert.Link href="/sesion"> Pincha AQUI </Alert.Link>   Gracias!!!
-                  </Alert>
-                ))}
-              </>)}
+            <Card style={{ width: '100%', border: '0' }}>
 
-            </Card.Body>
-          </Card>
-        </Col>
+
+              <Card.Body>
+                <Card.Title>Elige un medio de pago disponible</Card.Title>
+                <Card.Text >
+                </Card.Text>
+                {/* {preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />}  */}
+                {user ? (preferenceId && <Wallet initialization={{ preferenceId: preferenceId }} />) : (<>
+                  {[
+                    'warning',
+                  ].map((variant) => (
+                    <Alert key={variant} variant={variant}>
+                      Para pagar tu pedido debes iniciar sesion.
+                      <Alert.Link href="/sesion"> Pincha AQUI </Alert.Link>   Gracias!!!
+                    </Alert>
+                  ))}
+                </>)}
+
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
       </Container>
 
@@ -133,9 +136,25 @@ export const Cart = () => {
 
 
 
-
-
   ) : (
-    <h2>Tu carrito está vacío...</h2>
+    <>
+      <Row>
+        <Col sm={1}></Col>
+        <Col sm={10}>
+          {[
+            'danger',
+          ].map((variant) => (
+            <Alert key={variant} variant={variant} className='text-center'>
+              Aun no haz seleccionado ningun producto... <br></br>para ver nuestro catálogo <br></br>
+              <Link to={`/home`}>
+              <Button variant='outline light'> Pincha AQUI </Button>
+              </Link>
+            </Alert>
+          ))}
+        </Col>
+        <Col sm={1}></Col>
+      </Row>
+
+    </>
   );
 };

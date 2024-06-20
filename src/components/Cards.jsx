@@ -9,54 +9,6 @@ function Cards({ data }) {
 
 
     return (
-        // <div>
-        // <Row xs={1} md={2} lg={4} >
-        //     {data.detail.map((product) => (
-        //         <Col key={product._id}>
-        //             <style type="text/css">
-        //                 {`
-        //                         .btn-flat {
-        //                          background-color: #9572ff;
-        //                             border-color: #9572ff;
-        //                         color: white;
-        //                         }
-
-        //                         .btn-xxl {
-        //                         padding: 1rem 1.5rem;
-        //                         font-size: 1.5rem;
-        //                         }
-        //                         `}
-        //             </style>
-        //             <Card border="" className="" style={{ textAlign: 'center', fontSize: '17px' }} >
-        //                 <Card.Header  >
-        //                     <small className="text-dark mt-3">{product.category.name}</small>
-
-        //                 </Card.Header>
-        //                 <Link to={`/home/${product._id}`}>
-        //                     <Card.Img variant="top" src={product.img} />
-        //                 </Link>
-        //                 <Card.Body>
-        //                     <Card.Title>{product.name}</Card.Title>
-        //                     <Card.Text>
-        //                         {/* {product.details} */}
-        //                     </Card.Text>
-        //                     <small className="text-dark" >Precio:  $ {product.price}</small>
-        //                 </Card.Body>
-        //                 <Card.Footer >
-        //                     <Link to={`/home/${product._id}`}>
-
-        //                         <Button variant='flat' size="sm">
-        //                             Ver Detalles
-        //                         </Button>
-
-        //                     </Link>
-        //                 </Card.Footer>
-        //             </Card>
-        //         </Col>
-
-        //     ))
-        //     }
-        // </Row >
         <Row xs={1} md={2} lg={4} >
             {data.detail.map((product) => (
                 <Col key={product._id}>
