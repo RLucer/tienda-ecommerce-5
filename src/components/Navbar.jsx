@@ -24,8 +24,8 @@ export default function NavbarMenu() {
       <Container>
         <Navbar.Brand as={Link} to="/home">  <img
           src="/log.jpeg"
-          width="200"
-          height="200"
+          width="100"
+          height="100"
           className="d-inline-block align-top"
           alt=""
         />
