@@ -71,27 +71,40 @@ export const Cart = () => {
   }
 
   return cart.length > 0 ? (
-    <Container>
-      <Row>
-        <Col>
-          <div className="shopping-cart">
-            <div className='text-center'><h4>Carro de Compras</h4></div>
+    <>
+      <Container >
+        <Row>
+          <Col xs={12} sm={8}>
+            <div className="shopping-cart">
+              <div className='text-center'><h4>Carro de Compras</h4></div>
+              <Row>
+                <Col >Producto
+                </Col>
+                <Col>Precio
+                </Col>
 
-            <hr />
-            <ul>
-              {cart.map((item, index) => (
-                <li key={index} className="cart-item">
-                  <span>{item.detail.name}</span>  <span> $ {item.detail.price}</span>
-                  <Button variant='outline-light' onClick={() => removeFromCart(index)}>❌</Button>
-                </li>
-              ))}
-            </ul>
-            <hr />
-            <div className='text-center'><h5>Total:   $ {total}</h5></div>
-          </div>
-        </Col>
+              </Row>
+              <hr />
+              <ul>
+                {cart.map((item, index) => (
+                  <li key={index} className="cart-item">
 
-        <Col>
+                    <span>{item.detail.name}</span>
+                    <span> $ {item.detail.price}</span>
+                    <Button variant='outline-light' onClick={() => removeFromCart(index)}>❌</Button>
+
+
+
+                  </li>
+                ))}
+              </ul>
+              <hr />
+              <Row>
+                <Col></Col> <Col></Col> <Col> <div className='text-center' ><h5>Total:   $ {total}</h5></div></Col>
+              </Row>
+            </div>
+          </Col>
+          <Col xs={12} sm={4}>
           <Card style={{ width: '100%', border: '0' }}>
             <Card.Img variant="top" src="" />
             <Card.Body>
@@ -113,8 +126,10 @@ export const Cart = () => {
             </Card.Body>
           </Card>
         </Col>
-      </Row>
-    </Container >
+        </Row>
+      </Container>
+
+    </>
 
 
 
