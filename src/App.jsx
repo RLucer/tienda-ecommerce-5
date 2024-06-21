@@ -31,8 +31,6 @@ function App() {
               <Route path="/sesion" element={<AuthForm />}></Route>
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/logout" element={<Log />}></Route>
-              {/* <Route path="/car" element={<Cart/>}></Route> */}
-              {/* <Route path="/login" element={<Auth />}> </Route> */}
               <Route element={<ProtectedRoute />}>
                 <Route path="/compras" element={<Compras />}></Route>
                 <Route path="/perfil" element={<Perfil />}></Route>
