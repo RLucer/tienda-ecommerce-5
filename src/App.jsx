@@ -25,6 +25,7 @@ function App() {
           <ProductProvider>
             <NavbarMenu />
             <Routes>
+              <Route path="/" element={<Home />}></Route>
               <Route path="/home" element={<Home />}></Route>
               <Route path="/home/:id" element={<DetailProduct />}></Route>
               <Route path="/sesion" element={<AuthForm />}></Route>
@@ -36,7 +37,7 @@ function App() {
                 <Route path="/compras" element={<Compras />}></Route>
                 <Route path="/perfil" element={<Perfil />}></Route>
               </Route>
-              <Route path="/*" element={<Navigate to={"/home"} />}></Route>
+              <Route path="/*" element={<Navigate to={"/"} />}></Route>
             </Routes>
             <Footer />
           </ProductProvider>
