@@ -44,6 +44,10 @@ function Cards({ data }) {
                                         Ver...
                                     </Button>
                                 </Link>
+                                <Card.Text>
+                                    <br />
+                                    Stock Disponible: {product.stock}
+                                </Card.Text>
                             </Card.Body>
                             <Card.Footer>
                                 {/* <small className="text-center">  Precio ${product.price}</small>

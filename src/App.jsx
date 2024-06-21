@@ -15,7 +15,6 @@ import { CartProvider } from "./context/CartContext.jsx";
 import { Cart } from "./components/Cart.jsx";
 import { Log } from "./components/Log.jsx";
 
-
 function App() {
 
   return (
@@ -38,7 +37,6 @@ function App() {
                 <Route path="/perfil" element={<Perfil />}></Route>
               </Route>
               <Route path="/*" element={<Navigate to={"/home"} />}></Route>
-
             </Routes>
             <Footer />
           </ProductProvider>

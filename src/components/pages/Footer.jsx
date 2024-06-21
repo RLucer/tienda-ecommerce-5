@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 export default function Footer() {
   return (
 
@@ -11,26 +11,7 @@ export default function Footer() {
           {/* <span>Get connected with us on social networks:</span> */}
         </div>
 
-        <div>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
-          </a>
-        </div>
+
       </section>
 
       <section className=''>
@@ -56,34 +37,29 @@ export default function Footer() {
 
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>RRSS</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Facebook
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Instagram
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Linkedln
-                </a>
-              </p>
+              <ul className="social-media">
+          <li>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+          </li>
+        </ul>
 
             </MDBCol>
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
-              <p>
-                <MDBIcon icon="home" className="me-3" />
-                AV. San Pedro 9695
-              </p>
-              <p>
-                <MDBIcon icon="envelope" className="me-3" />
-                info@antojitos.com
-              </p>
+        
               <p>
                 <MDBIcon icon="phone" className="me-1" /> + 562 234 567 88
               </p>
@@ -95,7 +71,7 @@ export default function Footer() {
         </MDBContainer>
       </section>
 
-      <div className='text-center p-2' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.10)' }}>
         © 2024 Copyright:
         <a className='text-reset fw-bold' href='https://github.com/RLucer'>
           Ricardo_Lucero
