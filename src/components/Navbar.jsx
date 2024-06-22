@@ -27,7 +27,7 @@ export default function NavbarMenu() {
           width="100"
           height="100"
           className="d-inline-block align-top"
-          alt=""
+          alt="100"
         />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,7 +36,7 @@ export default function NavbarMenu() {
             <Nav.Link as={Link} className="ms-auto new_link" to="/home">Home</Nav.Link>
 
             {user ? (
-              <NavDropdown title=<h5> {user}  </h5> id="basic-nav-dropdown">
+              <NavDropdown title={user} id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} className="ms-auto new_link" to="/perfil">Mi Perfil</NavDropdown.Item>
                 <NavDropdown.Item as={Link} className="ms-auto new_link" to="/compras">Mis Compras</NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -44,16 +44,9 @@ export default function NavbarMenu() {
               </NavDropdown>) : (<Nav.Link as={Link} className="ms-auto   new_link" to="/sesion"> Iniciar Sesion</Nav.Link>)}
 
           </Nav>
-          {/* <Nav className="ms-auto new_link2">
-            <Nav.Link as={Link} to="/cart"> <h2>🛒</h2></Nav.Link>
-            <Nav.Link as={Link} to="/cart"> <CountProduct /> </Nav.Link>
-          </Nav> */}
-
           <Nav>
-          <Nav.Link as={Link} to="/cart">  <Shopping></Shopping> </Nav.Link>
-           
-          </Nav>
-
+            <Nav.Link as={Link} to="/cart">  <Shopping></Shopping> </Nav.Link>
+          </Nav>ß
         </Navbar.Collapse>
       </Container>
     </Navbar>
