@@ -121,7 +121,9 @@ export const Cart = () => {
                   ].map((variant) => (
                     <Alert key={variant} variant={variant}>
                       Para pagar tu pedido debes iniciar sesion.
-                      <Alert.Link href="/sesion"> Pincha AQUI </Alert.Link>   Gracias!!!
+                      <Link to={`/sesion`}>
+                        <Button variant='outline light'> Pincha AQUI </Button>
+                      </Link>
                     </Alert>
                   ))}
                 </>)}
@@ -147,7 +149,7 @@ export const Cart = () => {
             <Alert key={variant} variant={variant} className='text-center'>
               Aun no haz seleccionado ningun producto... <br></br>para ver nuestro catálogo <br></br>
               <Link to={`/home`}>
-              <Button variant='outline light'> Pincha AQUI </Button>
+                <Button variant='outline light'> Pincha AQUI </Button>
               </Link>
             </Alert>
           ))}
