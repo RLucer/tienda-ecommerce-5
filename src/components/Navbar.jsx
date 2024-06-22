@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 //import { ChildExample } from './ChildExample';
 import { UserContext } from '../context/UserContext'
-import { CountProduct } from './CountProduct';
+// import { CountProduct } from './CountProduct';
 import './Navbar.css'
 import Shopping from './shop';
 
@@ -46,7 +46,7 @@ export default function NavbarMenu() {
           </Nav>
           <Nav>
             <Nav.Link as={Link} to="/cart">  <Shopping></Shopping> </Nav.Link>
-          </Nav>ß
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
