@@ -4,6 +4,12 @@ Tienda web para gestionar tus ventas registrando usuarios, clientes y productos,
 
 << Aplicación creada con fines educacionales, pero funcional al 100%.>>
 
+## Screenshots
+
+![App Screenshot](/public/screenshot.png)
+
+
+
 ## Instalación
 
 Instrucciones sobre cómo instalar y configurar el proyecto.
