@@ -25,8 +25,8 @@ export default function NavbarMenu() {
         <Navbar.Brand as={Link} to="/home">
           <img
             src="/log.jpeg"
-            width="200"
-            height="200"
+            width="400"
+            height="400"
             className="d-inline-block align-top"
             alt="200"
           />
