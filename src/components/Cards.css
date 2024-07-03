@@ -6,7 +6,7 @@
 .btn-xxl {
     padding: 1rem 1.7rem;
     font-size: 1.7rem;
-}
+} */
 .card-hover {
   transition: transform 0.3s ease;
 }
@@ -15,7 +15,7 @@
   transform: scale(1.05);
 }
 
-.lila-btn-3 {
+/* .lila-btn-3 {
   margin-top: 5px;
   background-color: #c080d9;
   border-color: #c080d9;

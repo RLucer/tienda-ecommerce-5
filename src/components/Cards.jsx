@@ -6,8 +6,6 @@ import { Alert, Button, CardGroup } from 'react-bootstrap';
 import './Cards.css';
 //import { CartProvider } from '../context/CartContext';
 function Cards({ data }) {
-
-
     return (
         <Row xs={1} md={2} lg={4} >
             {data.detail.map((product) => (
