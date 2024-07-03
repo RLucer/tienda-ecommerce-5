@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 //import { ChildExample } from './ChildExample';
 import { UserContext } from '../context/UserContext'
 // import { CountProduct } from './CountProduct';
-import './Navbar.css'
+//import './Navbar.css'
 import Shopping from './shop';
 
 //import { Cart } from '../components/Cart'
@@ -25,8 +25,8 @@ export default function NavbarMenu() {
         <Navbar.Brand as={Link} to="/home">
           <img
             src="/log.jpeg"
-            width="400"
-            height="400"
+            width="100"
+            height="100"
             className="d-inline-block align-top"
             alt="200"
           />
