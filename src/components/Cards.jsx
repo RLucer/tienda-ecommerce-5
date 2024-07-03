@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
 import { Alert, Button, CardGroup } from 'react-bootstrap';
-import './Cards.css';
+//import './Cards.css';
 //import { CartProvider } from '../context/CartContext';
 function Cards({ data }) {
 
