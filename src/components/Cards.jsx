@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
 import { Alert, Button, CardGroup } from 'react-bootstrap';
-//import "./Cards.css";
+import './Cards.css';
 //import { CartProvider } from '../context/CartContext';
 function Cards({ data }) {
 
@@ -25,35 +25,36 @@ function Cards({ data }) {
                     .lila-btn-3:hover {
                     background-color: #834aff;
                     border-color: #834aff;
+
                     }
                                 
                                  `}
                     </style>
                     <CardGroup>
-                        <Card className='mt-2 mb-3'>
+                        <Card className='mt-2 mb-5 px-0 card-hover px-2 border-1'>
                             <Link to={`/home/${product._id}`}>
                                 <Card.Img variant="top" src={product.img} />
                             </Link>
-                            <Card.Body className="text-dark mt-3 mb-4 text-center">
+                            <Card.Body className="text-dark mt-1 mb-1 text-center">
                                 <Card.Title> {product.name}</Card.Title>
                                 <Card.Text>
                                     Precio $  {product.price}
                                 </Card.Text>
                                 <Link to={`/home/${product._id}`}>
                                     <Button variant="secondary" className="lila-btn-3" size="sm">
-                                        Ver...
+                                        Agregar
                                     </Button>
                                 </Link>
                                 <Card.Text>
                                     <br />
                                     Stock Disponible: {product.stock}
+                                    <br />
+                                    <small className="text-dark mt-1 mb-1 text-center"> {product.category.name}</small>
                                 </Card.Text>
                             </Card.Body>
-                            <Card.Footer>
-                                {/* <small className="text-center">  Precio ${product.price}</small>
-                                 */}
-                                <small className="text-dark mt-3 mb-4 text-center">{product.category.name}</small>
-                            </Card.Footer>
+                            {/* <Card.Footer>
+                                <small className="text-dark mt-1 mb-1 text-center">{product.category.name}</small>
+                            </Card.Footer> */}
                         </Card>
                     </CardGroup>
                 </Col>

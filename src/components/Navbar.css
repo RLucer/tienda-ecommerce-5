@@ -4,6 +4,9 @@
     line-height: 22pt;   /* separacion entre lineas */ 
     text-indent: 28pt;   /* para sangrias */ 
     margin-left: 20%;
-    
-    
   }
+
+  .custom-navbar {
+    background-color: #f8f9fa; /* Fondo gris suave */
+  }
+  
